@@ -1,9 +1,14 @@
-pipeline {
+pipeline{
     agent any
     stages{
-        stage("git clone"){
+        stage("Demo"){
             steps{
-                echo "hello world"
+                echo "hello welcome"
+            }
+        }
+        stage("test"){
+            steps{
+                echo "Jenkinsfiles"
             }
         }
     }
