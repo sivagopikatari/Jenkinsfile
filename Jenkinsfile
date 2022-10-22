@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage("maven build"){
+        stage("lucky"){
             when{
                 branch "lucky"
             }
@@ -11,7 +11,7 @@ pipeline{
         }
         stage("dev"){
         when{
-        branch "develop"
+        branch "dev"
         }
             steps{
                 echo "deploy to dev"
