@@ -17,16 +17,17 @@ pipeline{
                 echo "deploy to dev"
             }
         }
-                stage("stage"){
+          stage("stage"){
                 when {
                 branch "stage"
             steps{
                 echo "deploy to stage"
             }
         }
-                        stage("main"){
-                        when {
-                        branch "main"
+            stage("main"){
+                   when {
+                     branch "main"
+                   }
             steps{
                 echo "deploying to main"
             }
