@@ -2,6 +2,9 @@ pipeline{
     agent any
     stages{
         stage("maven build"){
+            when{
+                branch "maven  lucky build"
+            }
             steps{
                 sh " clean package -DskipTests=true"
             }
