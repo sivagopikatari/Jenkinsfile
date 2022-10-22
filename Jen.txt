@@ -24,7 +24,7 @@ pipeline{
                         when {
                         branch "main"
             steps{
-                echo "deploy to main"
+                echo "deploying to main"
             }
         }
     }
