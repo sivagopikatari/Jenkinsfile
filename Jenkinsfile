@@ -30,7 +30,7 @@ pipeline{
                         branch "main"
                         }
             steps{
-                echo "deploying to main"
+                echo "deploy to main"
             }
         }
     }
