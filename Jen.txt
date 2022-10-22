@@ -2,6 +2,9 @@ pipeline{
     agent any
     stages{
         stage("maven build"){
+        when{
+        branch "maven"
+        }
             steps{
                 sh "mvn clean package -DskipTests=true"
             }
@@ -9,6 +12,7 @@ pipeline{
         stage("dev"){
         when{
         branch "develop"
+        }
             steps{
                 echo "deploy to dev"
             }
