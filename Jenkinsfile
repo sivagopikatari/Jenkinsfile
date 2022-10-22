@@ -30,7 +30,8 @@ pipeline{
                    }
             steps{
                 echo "deploying to main"
-            }
-        }
-    }
+             }
+         }
+      }
+   }
 }
