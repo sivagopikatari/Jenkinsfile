@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("maven build"){
         when{
-        branch "maven"
+        branch "lucky"
         }
             steps{
                 sh "mvn clean package -DskipTests=true"
