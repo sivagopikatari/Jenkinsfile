@@ -19,7 +19,7 @@ pipeline{
         }
                 stage("stage"){
                 when {
-                branch "stage
+                branch "stage"
                 }
             steps{
                 echo "deploy to stage"
