@@ -6,7 +6,7 @@ pipeline{
         branch "lucky"
         }
             steps{
-                sh "mvn clean package -DskipTests=true"
+                sh " clean package -DskipTests=true"
             }
         }
         stage("dev"){
