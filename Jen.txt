@@ -1,14 +1,30 @@
 pipeline{
     agent any
     stages{
-        stage("Demo"){
+        stage("maven build"){
             steps{
-                echo "hello welcome"
+                sh "mvn clean package -DskipTests=true"
             }
         }
-        stage("test"){
+        stage("dev"){
+        when{
+        branch "develop"
             steps{
-                echo "Jenkinsfiles"
+                echo "deploy to dev"
+            }
+        }
+                stage("stage"){
+                when {
+                branch "stage
+            steps{
+                echo "deploy to stage"
+            }
+        }
+                        stage("main"){
+                        when {
+                        branch "main"
+            steps{
+                echo "deploy to main"
             }
         }
     }
