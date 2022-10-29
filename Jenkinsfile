@@ -25,5 +25,13 @@ pipeline{
                 echo "deploy to main"
             }
         }
+        stage("aghsv"){
+        when{
+        branch "lucky"
+        }
+            steps{
+                echo "deploy to "
+            }
+        }
     }
 }
