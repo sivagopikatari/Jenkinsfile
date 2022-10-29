@@ -1,14 +1,6 @@
 pipeline{
     agent any
     stages{
-        stage("lucky"){
-            when{
-                branch "lucky"
-            }
-            steps{
-                sh " clean package -DskipTests=true"
-            }
-        }
         stage("dev"){
         when{
         branch "dev"
